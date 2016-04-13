@@ -1,0 +1,298 @@
+a {
+    display: table-cell;
+    padding-top: 10px;
+    color: #3F52B0;
+}
+
+br {
+    display: none;
+}
+
+p,
+em {
+    color: #888888;
+}
+
+h2 {
+    text-align: center;
+}
+
+hr {
+    width: 85%;
+    margin-bottom: 15px;
+}
+
+#header {
+    background-color: white;
+    text-align: center;
+    padding-bottom: 5px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#name {
+    color: #5E5E5E;
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+.role {
+    color: #7F7F7F;
+    font-size: 18px;
+    padding-top: 0px;
+    float: left;
+}
+
+.welcome-message {
+    color: #7F7F7F;
+    font-size: 18px;
+    display: block;
+    text-align: right;
+    padding: 0; 
+}
+
+#contactClick {
+    background-color: #D8D8D8;
+    width: 50%;
+}
+
+.contactAnimate {
+    opacity: 0;
+}
+
+#topContacts {
+    list-style: none;
+    float: right;
+    display: block;
+    text-align: right;
+    padding: 0;
+}
+
+#skills-h3 {
+    text-align: left;
+    color: #7F7F7F;
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 0;
+    display: block;
+    padding: 0;
+    margin-top: 16px;
+}
+
+#skills {
+    font-size: 0px;
+    padding: 1px 0 0 0px;
+    float: left;
+}
+
+#workExperience,
+#education {
+    margin-top: 300px;
+    max-height: 40px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+	transition        : .75s ease-out;
+	-moz-transition   : .75s ease-out;
+	-ms-transition    : .75s ease-out;
+	-o-transition     : .75s ease-out;
+	-webkit-transition: .75s ease-out;
+    overflow: hidden;
+}
+
+#workExperience:hover {
+    max-height: 999px;
+    transition: .75s;
+}
+
+#education:hover {
+    max-height: 999px;
+    transition: .75s;
+}
+
+.lightboxShadow {
+    box-shadow: 2px 2px 2px #7F7F7F;
+}
+
+.boxShadow {
+    box-shadow: 3px 3px 4px #D6D6D6;
+}
+
+.bgColor {
+    background-color: #F2F2F2;
+}
+
+.bgHoverColor {
+    background-color: #E8E8E8;
+}
+
+.bgFooter {
+    background: #CCCCCC;
+    color: #848484;
+}
+
+.work-entry p {
+    width: 85%;
+}
+
+#projects {
+    margin-top: 300px;
+}
+
+#projects,
+.project-entry {
+    text-align: center;
+    display: block;
+}
+
+.centeredText {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    text-align: center;
+}
+
+.date-text {
+    display: block;
+    float: none;
+}
+
+#onlineClass {
+    padding: 0px 5% 5px 5%;
+}
+
+h3 {
+    font-weight: bold;
+    margin: 10px 0 0 0;
+    padding-bottom: 0;
+    color: #777777;
+}
+
+#map {}
+
+#mapDiv {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+.coolGray {
+    color: #888888;
+    padding-left: 15px;
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fader {
+    opacity: 0;
+	-webkit-animation          : fadeIn ease-in 1;
+	-moz-animation             : fadeIn ease-in 1;
+	animation                  : fadeIn ease-in 1;
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode   : forwards;
+	animation-fill-mode        : forwards;
+	-webkit-animation-duration : .70s;
+	-moz-animation-duration    : .70s;
+	animation-duration         : .70s;
+}
+
+.fader.one {
+	-webkit-animation-delay: 0.5s;
+	-moz-animation-delay   : 0.5s;
+	animation-delay        : 0.5s;
+}
+
+.fader.two {
+	-webkit-animation-delay: 1.2s;
+	-moz-animation-delay   : 1.2s;
+	animation-delay        : 1.2s;
+}
+
+.fader.three {
+	-webkit-animation-delay: 1.5s;
+	-moz-animation-delay   : 1.5s;
+	animation-delay        : 1.5s;
+}
+
+
+/*.slider {
+	position: relative;
+	animation: slideIn 2s forwards;
+	-webkit-animation: slideIn 2s forwards;
+}
+
+@keyframes slideIn{
+    from{opacity:0;top:100%}
+    to{opacity:1;top:0%;}
+
+@-webkit-keyframes slideIn{
+    from{opacity:0;top:100%}
+    to{opacity:1;top:0%;}
+}*/
+
+.tester {
+    font-size: 50px;
+}
+
+@media only screen and (max-width: 820px) {
+    #header {
+        padding-bottom: 10px;
+    }
+    #skills-h3 {
+        display: none;
+    }
+    #skills {
+        float: none;
+    }
+    #topContacts {
+        text-align: center;
+        float: none;
+        display: block;
+    }
+    .autoImg {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #name {
+        float: none;
+    }
+    .role {
+        display: none;
+    }
+    .welcome-message {
+        display: none;
+    }
+    hr {
+        margin-top: 0px;
+    }
+}
