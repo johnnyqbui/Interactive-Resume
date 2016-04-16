@@ -8,16 +8,12 @@ br {
     display: none;
 }
 
-p,
-em {
-    color: ;
-}
-
 h2 {
     text-align: center;
 }
 
 h3 {
+	color: #828282;
     font-weight: bold;
     margin: 10px 0 0 0;
     padding-bottom: 0;
