@@ -15,7 +15,7 @@ var bio = {
 function nameRole() {
     var formattedName = HTMLheaderName.replace("%data%", bio.name);
     var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-    var formattedMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMsg)
+    var formattedMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMsg);
     $("#header").prepend(formattedName + " " + formattedRole + " " + formattedMessage);
 };
 
@@ -23,7 +23,7 @@ function displayContacts() {
     var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
     var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
     var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-    $("#topContacts").addClass("contactInfo");
+    $("#topContacts").addClass("ContactInfo");
     $("#topContacts").append(formattedMobile + formattedEmail + formattedGithub);
 };
 
@@ -41,9 +41,6 @@ function displaySkills() {
     }
 }
 
-nameRole();
-displayContacts();
-displaySkills();
 
 var work = {
     "jobs": [{
@@ -51,27 +48,32 @@ var work = {
         "title": "Administrative Assistant/Orientation Leader",
         "location": "Houston, TX",
         "dates": "August 2009 - August 2013, September 2015 - Present",
-        "description": "Boring mumbo jumbo about filng paperwork and communicating with students and parents about how to complete financial aid application."
+        "description": "Boring mumbo jumbo about filng paperwork and "+
+        "communicating with students and parents about how to complete "+
+        "financial aid application."
     }, {
         "employer": "San Jacinto College Testing Department",
         "title": "Administrative Assistant",
         "location": "Houston, TX",
         "dates": "Octbober 2014 - April 2015",
-        "description": "More usual office stuff, ensuring students don't cheat on exams and keeping record of student test scores."
+        "description": "More usual office stuff, ensuring students don't "+
+        "cheat on exams and keeping record of student test scores."
     }, {
         "employer": "Keais Inc.",
         "title": "Order Entry Specialist",
         "location": "Houston, TX",
         "dates": "April 2015 - August 2015",
-        "description": "Some more boring office stuff, like ensuring that all ordered quality standards are met through the entry process. I had my own cubicle though."
+        "description": "Some more boring office stuff, like ensuring that "+
+        "all ordered quality standards are met through the entry process. I "+
+        "had my own cubicle though."
     }]
 }
 
 function displayWork() {
-    var linkSanJac = ("http://www.sanjac.edu/")
-    var linkKeais = ("http://keais.com/")
-    for (var jobs in work.jobs) {
+    var linkSanJac = ("http://www.sanjac.edu/");
+    var linkKeais = ("http://keais.com/");
 
+    for (var jobs in work.jobs) {
         $("#workExperience").append(HTMLworkStart);
         var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[jobs].employer);
         var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[jobs].title);
@@ -85,20 +87,19 @@ function displayWork() {
     }
 }
 
-displayWork();
-
 
 var projects = {
     "projects": [{
-            "title": "Portfolio",
-            "date": "March 2016",
-            "description": "Portfolio created for Udacity Project",
-            "images": ["images/portfolio.jpg"]
-        }]
+        "title": "Portfolio",
+        "date": "March 2016",
+        "description": "Portfolio created for Udacity Project",
+        "images": ["images/portfolio.jpg"]
+    }]
 }
 
 projects.display = function() {
     var projectLink = "http://johnnyqbui.github.io/Portfolio/";
+    $("img").addClass("AutoImg");
     for (var project in projects.projects) {
         $("#projects").append(HTMLprojectStart);
         var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
@@ -116,8 +117,6 @@ projects.display = function() {
     }
 };
 
-projects.display();
-$("img").addClass("autoImg");
 
 var education = {
     "schools": [{
@@ -145,7 +144,6 @@ var education = {
     }]
 }
 
-
 function displayEducation() {
     var linkSanJac = ("http://www.sanjac.edu/")
     var linkUhcl = "http://prtl.uhcl.edu/portal/page/portal/HOMEPAGE";
@@ -164,7 +162,7 @@ function displayEducation() {
 
     for (var course in education.onlineCourses) {
         $("#education").append(HTMLonlineClasses);
-        $("#education").append("<div id = onlineClass></div>")
+        $("#education").append("<div id = onlineClass></div>");
         var formattedonlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
         var formattedonlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
         var formattedonlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[course].dates);
@@ -175,93 +173,113 @@ function displayEducation() {
     }
 }
 
-displayEducation();
-
 function displayFooterContacts() {
     var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
     var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
     var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
     $("#footerContacts").append(formattedMobile + formattedEmail + formattedGithub);
-};
-
-displayFooterContacts();
-
-$("#main").append(internationalizeButton);
+}
 
 function inName() {
     var newName = bio.name;
     newName = newName.split(" ");
-    firstName = newName[0].slice(0, 1).toUpperCase() + newName[0].slice(1).toLowerCase();
-    lastName = newName[1].toUpperCase();
+    var firstName = newName[0].slice(0, 1).toUpperCase() + newName[0].slice(1).toLowerCase();
+    var lastName = newName[1].toUpperCase();
     formattedName = firstName + " " + lastName;
     newName = HTMLheaderName.replace("%data%", formattedName);
     return formattedName;
 }
 
-inName();
 
-$("#mapDiv").append(googleMap);
-$(".orange-text").addClass("coolGray");
-$(".orange-text").removeClass("orange-text");
+function newHeader() {
+	$("#main").append(internationalizeButton);
+	$("#header").children("span").first().addClass("Role");
+	$("#header").addClass("HeaderText");
+	$("hr").remove();
+	$("#header").next().append("<hr>");
+	$(".ContactInfo").children("li").addClass("ContactAnimate");
+}
 
-$(".white-text").addClass("coolGray")
-$(".white-text").removeClass("white-text")
+function deleteItems() {
+    $(".orange-text").removeClass("orange-text");
+    $(".white-text").removeClass("white-text");
+    $("#lets-connect").removeClass("dark-gray");
+    $("#lets-connect").children("h2").removeClass("orange");
+}
 
-$("#lets-connect").children("h2").addClass("bgFooter");
-$("#lets-connect").children("h2").removeClass("orange");
+function addItems() {
+	$("#header").addClass("Fader One");
+	$("#workExperience").addClass("Fader One");
+	$("#projects").addClass("Fader One");
+	$("#education").addClass("Fader One");
+	$("#workExperience").addClass("LightBoxShadow");
+    $(".project-entry").children("a, div").addClass("CenteredText");
+    $("#education").addClass("LightBoxShadow");
+    $("#mapDiv").append(googleMap);
+    $("#lets-connect").children("h2").addClass("BgFooter");
+}
 
-$("#lets-connect").removeClass("dark-gray");
+function fadeContact() {
+    $(".ContactAnimate").first().animate({
+        "opacity": "1"
+    }, 1000, "easeInOutQuart");
 
-$(".contactInfo").children("li").addClass("contactAnimate")
-$(".project-entry").children("a, div").addClass("centeredText")
+    $(".ContactAnimate").first().next().animate({
+        "opacity": "1"
+    }, 1500, "easeInOutQuart");
 
-$("#header").addClass("fader one");
-$("#workExperience").addClass("fader one");
-$("#projects").addClass("fader one");
-$("#education").addClass("fader one");
+    $(".ContactAnimate").last().animate({
+        "opacity": "1"
+    }, 2000, "easeInOutQuart");
+}
 
-$(".contactAnimate").first().animate({
-    "opacity": "1"
-}, 1000, "easeInOutQuart")
-$(".contactAnimate").first().next().animate({
-    "opacity": "1"
-}, 1500, "easeInOutQuart")
-$(".contactAnimate").last().animate({
-    "opacity": "1"
-}, 2000, "easeInOutQuart")
+function animatePage() {
+    $("#skills").animate({
+        "font-size": "17px"
+    }, 1000, "easeOutSine");
 
-$("#skills").animate({
-    "font-size": "17px"
-}, 1000, "easeOutSine");
-$("#workExperience").animate({
-    'margin-top': '0px'
-}, 500, "easeOutSine");
-$("#projects").animate({
-    'margin-top': '0px'
-}, 1400, "easeOutSine");
-$("#education").animate({
-    'margin-top': '0px'
-}, 700, "easeInSine");
+    $("#workExperience").animate({
+        'margin-top': '0px'
+    }, 500, "easeOutSine");
 
-$("hr").remove();
-$("#header").next().append("<hr>");
-$("#header").children("span").first().addClass("role");
+    $("#projects").animate({
+        'margin-top': '0px'
+    }, 1400, "easeOutSine");
 
-$(".education-entry").addClass("invisible");
-$("#onlineClass").addClass("invisible");
-$("#workExperience").addClass("lightboxShadow");
-$("#education").addClass("lightboxShadow");
+    $("#education").animate({
+        'margin-top': '0px'
+    }, 700, "easeInSine");
+}
 
+function hover() {
+    $("#workExperience").hover(function() {
+        $(this).toggleClass("LightBoxShadow");
+        $(this).toggleClass("BgHoverColor");
+        $(this).toggleClass("BgColor");
+    })
 
+    $("#education").hover(function() {
+        $(this).toggleClass("LightBoxShadow");
+        $(this).toggleClass("BgHoverColor");
+        $(this).toggleClass("BgColor");
+    })
+}
 
-$("#workExperience").hover(function() {
-    $(this).toggleClass("lightboxShadow");
-    $(this).toggleClass("bgHoverColor");
-    $(this).toggleClass("bgColor");
-})
+function otherFunctions() {
+	newHeader();
+	deleteItems();
+	addItems();
+	fadeContact();
+	animatePage();
+	inName();
+	hover();
+}
 
-$("#education").hover(function() {
-    $(this).toggleClass("lightboxShadow");
-    $(this).toggleClass("bgHoverColor");
-    $(this).toggleClass("bgColor");
-})
+nameRole();
+displayContacts();
+displaySkills();
+displayWork();
+projects.display();
+displayEducation();
+displayFooterContacts();
+otherFunctions();
