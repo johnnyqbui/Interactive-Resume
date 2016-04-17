@@ -39,7 +39,7 @@ var work = {
         "employer": "San Jacinto College Financial Aid Office",
         "title": "Administrative Assistant/Orientation Leader",
         "location": "Houston, TX",
-        "date": "August 2009 - August 2013, September 2015 - Present",
+        "dates": "August 2009 - August 2013, September 2015 - Present",
         "description": "Boring mumbo jumbo about filng paperwork and " +
             "communicating with students and parents about how to complete " +
             "financial aid application.",
@@ -48,7 +48,7 @@ var work = {
         "employer": "San Jacinto College Testing Department",
         "title": "Administrative Assistant",
         "location": "Houston, TX",
-        "date": "Octbober 2014 - April 2015",
+        "dates": "Octbober 2014 - April 2015",
         "description": "More usual office stuff, ensuring students don't " +
             "cheat on exams and keeping record of student test scores.",
         "url": "http://www.sanjac.edu/"
@@ -56,7 +56,7 @@ var work = {
         "employer": "Keais Inc.",
         "title": "Order Entry Specialist",
         "location": "Houston, TX",
-        "date": "April 2015 - August 2015",
+        "dates": "April 2015 - August 2015",
         "description": "Some more boring office stuff, like ensuring that " +
             "all ordered quality standards are met through the entry process. I " +
             "had my own cubicle though.",
@@ -71,7 +71,7 @@ work.display = function() {
         formattedEmployer = formattedEmployer.replace("#", work.jobs[job].url);
         var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
         var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
-        var formattedDate = HTMLworkDates.replace("%data%", work.jobs[job].date);
+        var formattedDate = HTMLworkDates.replace("%data%", work.jobs[job].dates);
         var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
         var formattedEmployerInfo = formattedEmployer + formattedTitle + formattedLocation + formattedDate + formattedDescription;
         $(".work-entry:last").append(formattedEmployerInfo);
@@ -80,7 +80,7 @@ work.display = function() {
 
 
 var projects = {
-    "project": [{
+    "projects": [{
         "title": "Portfolio",
         "dates": "March 2016",
         "description": "Portfolio created for Udacity Project",
@@ -90,16 +90,16 @@ var projects = {
 };
 
 projects.display = function() {
-    for (var i = 0; i < projects.project.length; i++) {
+    for (var i = 0; i < projects.projects.length; i++) {
         $("#projects").append(HTMLprojectStart);
-        var formattedTitle = HTMLprojectTitle.replace("%data%", projects.project[i].title);
-        var formattedDate = HTMLprojectDates.replace("%data%", projects.project[i].dates);
-        var formattedDescription = HTMLprojectDescription.replace("%data%", projects.project[i].description);
+        var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[i].title);
+        var formattedDate = HTMLprojectDates.replace("%data%", projects.projects[i].dates);
+        var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[i].description);
         var formattedProjects = formattedTitle + formattedDate + formattedDescription;
         $(".project-entry:last").append(formattedProjects);
-        $(".project-entry:first").children("a").attr("href", projects.project[i].url);
-        for (var x = 0; x < projects.project[i].images.length; x++)
-            var formattedImage = HTMLprojectImage.replace("%data%", projects.project[i].images[x]);
+        $(".project-entry:first").children("a").attr("href", projects.projects[i].url);
+        for (var x = 0; x < projects.projects[i].images.length; x++)
+            var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[i].images[x]);
         	$(".project-entry:last").append(formattedImage);
     }
 };
@@ -110,7 +110,7 @@ var education = {
         "name": "San Jacinto College",
         "location": "Houston, TX",
         "degree": "A.S.",
-        "majors": "Biology",
+        "majors": ["Biology"],
         "dates": "2009 - 2012",
         "graudation year": "2012",
         "url": "http://www.sjcd.edu"
@@ -118,7 +118,7 @@ var education = {
         "name": "University of Houston Clear-Lake",
         "location": "Clear-Lake City, TX",
         "degree": "B.S. - In Progress",
-        "majors": "Computer Information Systems",
+        "majors": ["Computer Information Systems"],
         "dates": "2015 - Present",
         "graduation year": "2019",
         "url": "http://prtl.uhcl.edu/portal/page/portal/HOMEPAGE"
@@ -126,7 +126,7 @@ var education = {
     "onlineCourses": [{
         "title": "Front-end Web Developer",
         "school": "Udacity",
-        "dates": "2015 - present",
+        "date": "2015 - present",
         "url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
     }]
 };
@@ -149,7 +149,7 @@ education.display = function() {
         $("#education").append("<div id = onlineClass></div>");
         var formattedonlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
         var formattedonlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
-        var formattedonlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[course].dates);
+        var formattedonlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[course].date);
         $("#onlineClass:last").append(formattedonlineTitle + formattedonlineSchool);
         $("#onlineClass:last").append(formattedonlineDates);
         $("#onlineClass:last").children("a").attr("href", education.onlineCourses[course].url);
