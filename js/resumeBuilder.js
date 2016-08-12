@@ -111,11 +111,11 @@ projects.display = function() {
     for (var i = 0; i < projects.projects.length; i++) {
         $("#projects").append(HTMLprojectStart);
         var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[i].title);
+        formattedTitle = formattedTitle.replace("#", projects.projects[i].url);
         var formattedDate = HTMLprojectDates.replace("%data%", projects.projects[i].dates);
         var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[i].description);
         var formattedProjects = formattedTitle + formattedDate + formattedDescription;
         $(".project-entry:last").append(formattedProjects);
-        $(".project-entry:first").children("a").attr("href", projects.projects[i].url);
         for (var x = 0; x < projects.projects[i].images.length; x++)
             var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[i].images[x]);
         	$(".project-entry:last").append(formattedImage);
