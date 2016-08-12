@@ -8,7 +8,7 @@ var bio = {
         "location": "Houston, TX"
     },
     "welcomeMessage": "\"Ahoy thar!\"",
-    "skills": ["HTML", "CSS", "JS", "JQuery", "GITHub"],
+    "skills": ["HTML", "CSS", "JS", "jQuery", "GITHub"],
     "biopic": "images/me.jpg"
 };
 
@@ -84,8 +84,8 @@ var projects = {
         "title": "Portfolio",
         "dates": "March 2016",
         "description": "Portfolio created for Udacity Project",
-        "images": ["images/portfolio.jpg"],
-        "url": "http://johnnyqbui.github.io/Portfolio/"
+        "images": ["images/mockup-portfolio.jpg"],
+        "url": "http://johnnyqbui.github.io/Portfolio-Mockup"
     }]
 };
 
