@@ -4,7 +4,7 @@ Using jQuery, developed an interactive resume application that reads all data fr
 
 ## How to open file:
 
-Click [here](http://johnnyqbui.github.io/Online-Resume/)
+Click [here](http://johnnyqbui.github.io/Interactive-Resume/)
 
 ## How do I complete this project?
 

@@ -62,7 +62,7 @@ hr {
     font-size: 18px;
     display: block;
     text-align: right;
-    padding: 0; 
+    padding: 0;
 }
 
 .ContactAnimate {
@@ -148,7 +148,11 @@ hr {
 #projects,
 .project-entry {
     text-align: center;
-    display: block;
+    display: inline-block;
+}
+
+.project-entry {
+    padding: 10px 3%;
 }
 
 .CenteredText {

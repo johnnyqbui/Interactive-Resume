@@ -1,14 +1,14 @@
 var bio = {
     "name": "Johnny Bui",
-    "role": "Front-End Pirate",
+    "role": "Front-End Developer Guy",
     "contacts": {
         "mobile": "281-896-2145",
         "email": "johnnyqbui7@gmail.com",
         "github": "https://github.com/johnnyqbui",
         "location": "Houston, TX"
     },
-    "welcomeMessage": "\"Ahoy thar!\"",
-    "skills": ["HTML", "CSS", "JS", "jQuery", "GITHub"],
+    "welcomeMessage": "\"Hi\"",
+    "skills": ["HTML", "CSS", "JS", "jQuery", "KnockoutJS"],
     "biopic": "images/me.jpg"
 };
 
@@ -81,11 +81,29 @@ work.display = function() {
 
 var projects = {
     "projects": [{
-        "title": "Portfolio",
+        "title": "Mockup-Portfolio",
         "dates": "March 2016",
         "description": "Portfolio created for Udacity Project",
         "images": ["images/mockup-portfolio.jpg"],
         "url": "http://johnnyqbui.github.io/Portfolio-Mockup"
+    }, {
+        "title": "Project Ticket",
+        "dates": "May 2016",
+        "description": "Houston 2016 Hackthon project",
+        "images": ["images/project-tickets.jpg"],
+        "url": "https://johnnyqbui.github.io/projectTicket"
+    }, {
+        "title": "Arcade Frogger Game Clone",
+        "dates": "May 2016",
+        "description": "Created HTML5 Canvas video game with use of OOJS",
+        "images": ["images/arcade-game.jpg"],
+        "url": "http://johnnyqbui.github.io/Arcade-Game-Frogger-Clone"
+    }, {
+        "title": "Project Neighborhood Map",
+        "dates": "July 2016",
+        "description": "Created app which shows suggested locations on Google Maps",
+        "images": ["images/neighborhood-map.jpg"],
+        "url": "https://johnnyqbui.github.io/Project-Neighborhood-Map/"
     }]
 };
 
@@ -120,13 +138,13 @@ var education = {
         "degree": "B.S. - In Progress",
         "majors": ["Computer Information Systems"],
         "dates": "2015 - Present",
-        "graduation year": "2019",
+        "graduation year": "2018",
         "url": "http://prtl.uhcl.edu/portal/page/portal/HOMEPAGE"
     }],
     "onlineCourses": [{
         "title": "Front-end Web Developer",
         "school": "Udacity",
-        "date": "2015 - present",
+        "date": "2015 - 2016",
         "url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
     }]
 };
