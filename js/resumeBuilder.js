@@ -9,7 +9,7 @@ var bio = {
     },
     "welcomeMessage": "\"Ahoy thar!\"",
     "skills": ["HTML", "CSS", "JS", "JQuery", "GITHub"],
-    "biopic": "images/fry.jpg"
+    "biopic": "images/me.jpg"
 };
 
 bio.display = function() {
