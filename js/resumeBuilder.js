@@ -39,7 +39,7 @@ var work = {
         "employer": "San Jacinto College Financial Aid Office",
         "title": "Administrative Assistant/Orientation Leader",
         "location": "Houston, TX",
-        "dates": "August 2009 - August 2013, September 2015 - Present",
+        "dates": "August 2009 - August 2013, September 2015 - July 2016",
         "description": "Boring mumbo jumbo about filng paperwork and " +
             "communicating with students and parents about how to complete " +
             "financial aid application.",
